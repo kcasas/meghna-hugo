@@ -250,14 +250,14 @@ function initialize() {
 	}];
 
 	var mapOptions = {
-		zoom: 14,
+		zoom: 17,
 		center: myLatLng,
-		disableDefaultUI: true,
-		scrollwheel: false,
+		disableDefaultUI: false,
+		scrollwheel: true,
 		navigationControl: false,
 		mapTypeControl: false,
 		scaleControl: false,
-		draggable: false,
+		draggable: true,
 		mapTypeControlOptions: {
 			mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'roadatlas']
 		}
@@ -285,7 +285,7 @@ function initialize() {
 		roadAtlasStyles, styledMapOptions);
 
 	map.mapTypes.set('roadatlas', usRoadMapType);
-	map.setMapTypeId('roadatlas');
+	// map.setMapTypeId('roadatlas');
 }
 
 google.maps.event.addDomListener(window, "load", initialize);
